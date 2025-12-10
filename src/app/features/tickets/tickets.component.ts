@@ -36,7 +36,7 @@ import { Subscription } from 'rxjs';
           pButton
           type="button"
           label="Novo Chamado"
-          class="p-button-success"
+          class="p-button-primary"
           (click)="showDialog = true"
         ></button>
       </div>
@@ -169,7 +169,7 @@ import { Subscription } from 'rxjs';
           pButton
           type="button"
           label="Salvar"
-          class="p-button-success"
+          class="p-button-primary"
           (click)="save()"
         ></button>
       </ng-template>
