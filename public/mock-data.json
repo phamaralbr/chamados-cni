@@ -1,0 +1,40 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "title": "Impressora não funciona",
+      "description": "A impressora do 3º andar está travada",
+      "category": "Hardware"
+    },
+    {
+      "id": 2,
+      "title": "Não conseguir acessar VPN",
+      "description": "VPN desconecta frequentemente",
+      "category": "Rede"
+    },
+    {
+      "id": 3,
+      "title": "Atualização de software necessária",
+      "description": "Microsoft Office precisa ser atualizado para a versão mais recente",
+      "category": "Software"
+    },
+    {
+      "id": 4,
+      "title": "Problema de exibição do monitor",
+      "description": "O segundo monitor não está sendo detectado",
+      "category": "Hardware"
+    },
+    {
+      "id": 5,
+      "title": "Email não sincroniza",
+      "description": "Email do Outlook não sincroniza com dispositivo móvel",
+      "category": "Software"
+    }
+  ],
+  "categories": [
+    { "label": "Hardware", "value": "Hardware" },
+    { "label": "Rede", "value": "Rede" },
+    { "label": "Software", "value": "Software" },
+    { "label": "Outro", "value": "Outro" }
+  ]
+}
