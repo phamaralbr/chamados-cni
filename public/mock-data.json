@@ -29,6 +29,132 @@
       "title": "Email não sincroniza",
       "description": "Email do Outlook não sincroniza com dispositivo móvel",
       "category": "Software"
+    },
+    {
+      "id": 6,
+      "title": "Teclado sem resposta",
+      "description": "Teclado externo não funciona depois da atualização",
+      "category": "Hardware"
+    },
+    {
+      "id": 7,
+      "title": "Conexão WiFi instável",
+      "description": "WiFi desconecta aleatoriamente na sala de reuniões",
+      "category": "Rede"
+    },
+    {
+      "id": 8,
+      "title": "Software travando frequentemente",
+      "description": "O aplicativo de vendas congela quando abre relatórios grandes",
+      "category": "Software"
+    },
+    {
+      "id": 9,
+      "title": "Cabo de rede danificado",
+      "description": "Cabo ethernet da estação 5 está com mau contato",
+      "category": "Rede"
+    },
+    {
+      "id": 10,
+      "title": "Webcam não detectada",
+      "description": "Webcam integrada do notebook não aparece nas configurações",
+      "category": "Hardware"
+    },
+    {
+      "id": 11,
+      "title": "Instalação de novo software",
+      "description": "Solicitar instalação do Adobe Creative Suite na workstation 12",
+      "category": "Software"
+    },
+    {
+      "id": 12,
+      "title": "Bateria do notebook descarrega rápido",
+      "description": "Notebook descarrega em menos de 2 horas mesmo sem uso intenso",
+      "category": "Hardware"
+    },
+    {
+      "id": 13,
+      "title": "Perda de conexão à rede corporativa",
+      "description": "Laptop desconecta da rede wireless corporativa frequentemente",
+      "category": "Rede"
+    },
+    {
+      "id": 14,
+      "title": "Impressora colorida não imprime cores",
+      "description": "Impressora HP está imprimindo em preto e branco apenas",
+      "category": "Hardware"
+    },
+    {
+      "id": 15,
+      "title": "Backup automático falhando",
+      "description": "Sistema de backup não consegue acessar o servidor de armazenamento",
+      "category": "Software"
+    },
+    {
+      "id": 16,
+      "title": "Som não funciona",
+      "description": "Caixas de som do computador não emitem áudio",
+      "category": "Hardware"
+    },
+    {
+      "id": 17,
+      "title": "Lentidão na internet",
+      "description": "Usuários relatam navegação muito lenta no período da tarde",
+      "category": "Rede"
+    },
+    {
+      "id": 18,
+      "title": "Erro ao abrir planilhas",
+      "description": "Excel fecha sozinho ao abrir arquivos maiores que 10MB",
+      "category": "Software"
+    },
+    {
+      "id": 19,
+      "title": "Mouse travando",
+      "description": "Mouse sem fio desconecta aleatoriamente",
+      "category": "Hardware"
+    },
+    {
+      "id": 20,
+      "title": "Problemas com firewall",
+      "description": "Aplicativo de vendas bloqueado pelo firewall empresarial",
+      "category": "Rede"
+    },
+    {
+      "id": 21,
+      "title": "Sistema operacional desatualizado",
+      "description": "Computadores do setor financeiro ainda estão rodando Windows 10 antigo",
+      "category": "Software"
+    },
+    {
+      "id": 22,
+      "title": "Estação sem energia",
+      "description": "Tomada da baia 7 não está fornecendo energia ao PC",
+      "category": "Hardware"
+    },
+    {
+      "id": 23,
+      "title": "Rede cabeada lenta",
+      "description": "Conexão via cabo na sala de TI está limitada a 10Mbps",
+      "category": "Rede"
+    },
+    {
+      "id": 24,
+      "title": "Erro na autenticação",
+      "description": "Usuário não consegue fazer login no sistema interno",
+      "category": "Software"
+    },
+    {
+      "id": 25,
+      "title": "Monitor piscando",
+      "description": "Monitor da estação 14 pisca a cada 5 segundos",
+      "category": "Hardware"
+    },
+    {
+      "id": 26,
+      "title": "Queda constante da VPN",
+      "description": "VPN desconecta sempre que o usuário abre uma videoconferência",
+      "category": "Rede"
     }
   ],
   "categories": [

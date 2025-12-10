@@ -30,31 +30,22 @@ import { Subscription } from 'rxjs';
     InputIconModule,
   ],
   template: `
-    <div class="flex flex-col gap-4">
-      <div class="flex justify-end">
-        <button
-          pButton
-          type="button"
-          label="Novo Chamado"
-          class="p-button-primary"
-          (click)="showDialog = true"
-        ></button>
-      </div>
-
-      <section class="shadow rounded p-4">
+    <div class="flex flex-col gap-4 p-4">
+      <section class="w-full">
         <p-table
           #dt1
           [value]="tickets"
           [paginator]="true"
-          [rows]="10"
-          [rowsPerPageOptions]="[10, 25, 50]"
+          [rows]="15"
+          [rowsPerPageOptions]="[15, 25, 50]"
           [globalFilterFields]="['title', 'description', 'category']"
           class="w-full"
         >
           <ng-template #caption>
-            <div class="flex gap-2">
-              <h2 class="text-lg font-semibold mb-4">Chamados</h2>
-              <p-iconfield iconPosition="left" class="ml-auto">
+            <div class="flex flex-col gap-4 md:flex-row md:items-center">
+              <h2 class="text-lg font-semibold">Chamados</h2>
+
+              <p-iconfield iconPosition="left" class="w-full md:w-auto md:ml-auto">
                 <p-inputicon>
                   <i class="pi pi-search"></i>
                 </p-inputicon>
@@ -63,8 +54,17 @@ import { Subscription } from 'rxjs';
                   type="text"
                   (input)="dt1.filterGlobal($event.target.value, 'contains')"
                   placeholder="Buscar..."
+                  class="w-full"
                 />
               </p-iconfield>
+
+              <button
+                pButton
+                type="button"
+                label="Novo Chamado"
+                class="p-button-primary w-full md:w-auto"
+                (click)="showDialog = true"
+              ></button>
             </div>
           </ng-template>
           <ng-template pTemplate="header">
@@ -74,7 +74,6 @@ import { Subscription } from 'rxjs';
               <th>Descrição</th>
               <th pSortableColumn="category">
                 Categoria
-                <!-- <p-sortIcon field="category"></p-sortIcon> -->
                 <p-columnFilter
                   field="category"
                   matchMode="equals"
@@ -92,7 +91,7 @@ import { Subscription } from 'rxjs';
                       [showClear]="true"
                       optionLabel="label"
                       optionValue="value"
-                      style="min-width: 12rem"
+                      class="w-full"
                     ></p-select>
                   </ng-template>
                 </p-columnFilter>
@@ -116,7 +115,7 @@ import { Subscription } from 'rxjs';
       header="Criar novo chamado"
       [modal]="true"
       [draggable]="false"
-      [style]="{ width: '32rem' }"
+      styleClass="w-full max-w-[32rem]"
       [breakpoints]="{ '960px': '75vw', '640px': '90vw' }"
       [appendTo]="'body'"
     >
@@ -148,7 +147,6 @@ import { Subscription } from 'rxjs';
           <p-select
             [(ngModel)]="form.category"
             [options]="categories"
-            [appendTo]="'body'"
             optionLabel="label"
             optionValue="value"
             placeholder="Selecione"
