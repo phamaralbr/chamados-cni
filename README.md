@@ -1,59 +1,51 @@
-# ChamadosCni
+# Chamados CNI
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
+Aplicação web desenvolvida com Angular para gerenciamento simples de chamados corporativos.  
+Permite listar e criar chamados utilizando dados mockados em arquivo JSON, com interface responsiva baseada em PrimeNG e TailwindCSS.
 
-## Development server
+---
 
-To start a local development server, run:
+## Tecnologias utilizadas
 
-```bash
-ng serve
-```
+- Angular 21
+- PrimeNG
+- TailwindCSS
+- TypeScript
+- Mock local em JSON
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Angular oferece estrutura sólida para aplicações corporativas.  
+PrimeNG acelera o desenvolvimento da interface com componentes prontos.  
+TailwindCSS simplifica a estilização responsiva.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Funcionalidades
 
-```bash
-ng generate component component-name
-```
+- Listagem de chamados com ID, título, descrição e categoria
+- Criação de novos chamados com validação de campos obrigatórios
+- Simulação de backend usando `mock-data.json`
+- Mensagens de feedback com PrimeNG Toast
+- Layout responsivo otimizado para desktop e mobile
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Instalação e execução
 
 ```bash
-ng test
+git clone https://github.com/phamaralbr/chamados-cni.git
+cd chamados-cni
+npm install
+npm start
 ```
 
-## Running end-to-end tests
+A aplicação ficará disponível em http://localhost:4200.
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
+## Uso de Ferramentas de Apoio
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+**ChatGPT** e **GitHub Copilot** foram utilizados como ferramentas de suporte ao desenvolvimento, principalmente para agilizar tarefas como geração de trechos de código, consultas rápidas a documentações, auxílio em debugging, revisão e esclarecimento de dúvidas.
 
-## Additional Resources
+Estimativa de código escrito ou ajustado com apoio de IA: cerca de 40%.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Todo o conteúdo sugerido pelas ferramentas foi revisado, adaptado e validado manualmente.
