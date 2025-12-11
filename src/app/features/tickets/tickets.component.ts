@@ -147,6 +147,7 @@ import { Subscription } from 'rxjs';
           <p-select
             [(ngModel)]="form.category"
             [options]="categories"
+            [appendTo]="'body'"
             optionLabel="label"
             optionValue="value"
             placeholder="Selecione"
