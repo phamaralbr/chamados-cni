@@ -7,15 +7,17 @@ Permite listar e criar chamados utilizando dados mockados em arquivo JSON, com i
 
 ## Tecnologias utilizadas
 
-- Angular 21
-- PrimeNG
-- TailwindCSS
-- TypeScript
-- Mock local em JSON
+- **Angular 21**
+- **PrimeNG**
+- **TailwindCSS**
+- **TypeScript**
+- **Mock local em JSON**
 
-Angular oferece estrutura sólida para aplicações corporativas.  
-PrimeNG acelera o desenvolvimento da interface com componentes prontos.  
-TailwindCSS simplifica a estilização responsiva.
+O stack foi escolhido por oferecer uma base moderna e produtiva para desenvolvimento front-end:
+
+- **Angular** assegura organização, padronização e escalabilidade.
+- **PrimeNG** acelera a criação da interface com componentes completos e consistentes.
+- **TailwindCSS** facilita um estilo responsivo e uniforme com menos código manual.
 
 ---
 

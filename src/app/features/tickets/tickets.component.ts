@@ -58,7 +58,7 @@ export class TicketsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.http.get<MockData>('/mock-data.json').subscribe((data) => {
+    this.http.get<MockData>('mock-data.json').subscribe((data) => {
       this.categories = data.categories;
     });
   }

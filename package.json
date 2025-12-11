@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "github-build": "ng build --configuration production --base-href 'https://phamaralbr.github.io/chamados-cni/'",
+    "github-deploy": "npx angular-cli-ghpages --dir=dist/chamados-cni/browser --no-silent",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

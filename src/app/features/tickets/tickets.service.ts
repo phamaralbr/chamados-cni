@@ -22,7 +22,7 @@ export class TicketsService {
   private mockData$: Observable<MockData>;
 
   constructor(private http: HttpClient) {
-    this.mockData$ = this.http.get<MockData>('/mock-data.json').pipe(
+    this.mockData$ = this.http.get<MockData>('mock-data.json').pipe(
       tap((data) => this._tickets$.next(data.tickets)),
       shareReplay(1)
     );
