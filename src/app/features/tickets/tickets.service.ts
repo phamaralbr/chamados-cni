@@ -2,18 +2,19 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { tap, shareReplay } from 'rxjs/operators';
+import { Ticket, MockData } from './tickets.model';
 
-export interface Ticket {
-  id: number;
-  title: string;
-  description: string;
-  category: string;
-}
+// export interface Ticket {
+//   id: number;
+//   title: string;
+//   description: string;
+//   category: string;
+// }
 
-export interface MockData {
-  tickets: Ticket[];
-  categories: Array<{ label: string; value: string }>;
-}
+// export interface MockData {
+//   tickets: Ticket[];
+//   categories: Array<{ label: string; value: string }>;
+// }
 
 @Injectable({ providedIn: 'root' })
 export class TicketsService {

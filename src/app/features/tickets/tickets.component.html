@@ -1,0 +1,137 @@
+<div class="flex flex-col gap-4 p-4">
+  <section class="w-full">
+    <p-table
+      #dt1
+      [value]="tickets"
+      [paginator]="true"
+      [rows]="15"
+      [rowsPerPageOptions]="[15, 25, 50]"
+      [globalFilterFields]="['title', 'description', 'category']"
+      class="w-full"
+    >
+      <ng-template #caption>
+        <div class="flex flex-col gap-4 md:flex-row md:items-center">
+          <h2 class="text-lg font-semibold">Chamados</h2>
+
+          <p-iconfield iconPosition="left" class="w-full md:w-auto md:ml-auto">
+            <p-inputicon>
+              <i class="pi pi-search"></i>
+            </p-inputicon>
+            <input
+              pInputText
+              type="text"
+              (input)="dt1.filterGlobal($event.target.value, 'contains')"
+              placeholder="Buscar..."
+              class="w-full"
+            />
+          </p-iconfield>
+
+          <button
+            pButton
+            type="button"
+            label="Novo Chamado"
+            class="p-button-primary w-full md:w-auto"
+            (click)="showDialog = true"
+          ></button>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="id">ID <p-sortIcon field="id"></p-sortIcon></th>
+          <th>Título</th>
+          <th>Descrição</th>
+          <th pSortableColumn="category">
+            Categoria
+            <p-columnFilter
+              field="category"
+              matchMode="equals"
+              display="menu"
+              [showMatchModes]="false"
+              [showOperator]="false"
+              [showAddButton]="false"
+            >
+              <ng-template #filter let-value let-filter="filterCallback">
+                <p-select
+                  [ngModel]="categoryFilterValue"
+                  (ngModelChange)="categoryFilterValue = $event; filter($event)"
+                  [options]="categories"
+                  placeholder="Filtrar"
+                  [showClear]="true"
+                  optionLabel="label"
+                  optionValue="value"
+                  class="w-full"
+                ></p-select>
+              </ng-template>
+            </p-columnFilter>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-item>
+        <tr>
+          <td>{{ item.id }}</td>
+          <td>{{ item.title }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.category }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </section>
+</div>
+
+<p-dialog
+  [(visible)]="showDialog"
+  header="Criar novo chamado"
+  [modal]="true"
+  [draggable]="false"
+  styleClass="w-full max-w-[32rem]"
+  [breakpoints]="{ '960px': '75vw', '640px': '90vw' }"
+  [appendTo]="'body'"
+>
+  <div class="flex flex-col gap-4">
+    <div>
+      <label class="block font-medium mb-2">Título</label>
+      <input
+        pInputText
+        type="text"
+        [(ngModel)]="form.title"
+        placeholder="Título do chamado"
+        class="w-full"
+      />
+    </div>
+
+    <div>
+      <label class="block font-medium mb-2">Descrição</label>
+      <textarea
+        pInputTextarea
+        [(ngModel)]="form.description"
+        rows="4"
+        placeholder="Descreva o problema"
+        class="w-full"
+      ></textarea>
+    </div>
+
+    <div>
+      <label class="block font-medium mb-2">Categoria</label>
+      <p-select
+        [(ngModel)]="form.category"
+        [options]="categories"
+        [appendTo]="'body'"
+        optionLabel="label"
+        optionValue="value"
+        placeholder="Selecione"
+        class="w-full"
+      ></p-select>
+    </div>
+  </div>
+
+  <ng-template pTemplate="footer">
+    <button
+      pButton
+      type="button"
+      label="Cancelar"
+      class="p-button-secondary"
+      (click)="showDialog = false"
+    ></button>
+    <button pButton type="button" label="Salvar" class="p-button-primary" (click)="save()"></button>
+  </ng-template>
+</p-dialog>
