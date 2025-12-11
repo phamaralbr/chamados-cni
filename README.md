@@ -3,6 +3,9 @@
 Aplicação web desenvolvida com Angular para gerenciamento simples de chamados corporativos.  
 Permite listar e criar chamados utilizando dados mockados em arquivo JSON, com interface responsiva baseada em PrimeNG e TailwindCSS.
 
+A versão publicada pode ser acessada em:  
+https://phamaralbr.github.io/chamados-cni/
+
 ---
 
 ## Tecnologias utilizadas
@@ -20,6 +23,10 @@ O stack foi escolhido por oferecer uma base moderna e produtiva para desenvolvim
 - **TailwindCSS** facilita um estilo responsivo e uniforme com menos código manual.
 
 ---
+
+## Deploy e CI/CD
+
+O projeto é publicado no **GitHub Pages** utilizando **GitHub Actions**.
 
 ## Funcionalidades
 
