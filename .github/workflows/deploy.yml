@@ -1,16 +1,22 @@
+name: Build and Deploy
 on:
   push:
     branches:
-      - 'main'
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: All things angular
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@1.4.0
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          build_configuration: staging
+          base_href: /chamados-cni/
+          deploy_branch: gh-pages
+          angular_dist_build_folder: dist/chamados-cni
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - id: build-publish
-        uses: bitovi/github-actions-angular-to-github-pages@v1.0.0
+  contents: write
